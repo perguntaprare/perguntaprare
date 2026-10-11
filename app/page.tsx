@@ -145,7 +145,6 @@ export default function Home() {
           <p className="lead">
             Vídeos curtos com o veredito. Não precisa agora? Salva.
           </p>
-          {/* TODO: confirm each profile URL in content/site.ts before launch. */}
           <ul className="socials">
             {socials.map((s) => (
               <li key={s.label}>

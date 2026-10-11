@@ -4,7 +4,7 @@
  * no cookies, developer apps that only publish to our own social accounts).
  * It must be reviewed by a qualified professional (lawyer / LGPD specialist)
  * before being relied on, and updated whenever the site or the apps change.
- * Placeholders to fill in: operator name and CPF/CNPJ, contact email
+ * Placeholder to confirm: contact email
  * (see content/site.ts).
  */
 import type { Metadata } from "next";
@@ -42,9 +42,7 @@ export default function PrivacyPage() {
         O {site.name} é um projeto de conteúdo em que uma inteligência
         artificial, a Rê, resume avaliações públicas de produtos. O responsável
         pelo projeto (o &ldquo;controlador&rdquo;, nos termos da LGPD) é{" "}
-        {/* TODO: operator name and CPF/CNPJ (content/site.ts). */}
-        <span className="placeholder">{site.operator.name}</span>, inscrito no{" "}
-        <span className="placeholder">{site.operator.id}</span>. Contato:{" "}
+        {site.operator.name}. Contato:{" "}
         <a href={`mailto:${email}`}>{email}</a>.
       </p>
 

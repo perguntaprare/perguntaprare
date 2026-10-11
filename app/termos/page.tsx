@@ -2,7 +2,7 @@
  * TEMPLATE NOTICE: these terms of use are a plain-language template written
  * for the current state of the project. They must be reviewed by a qualified
  * professional (lawyer) before being relied on, and updated whenever the site
- * or the business changes. Placeholders to fill in: operator name and
+ * or the business changes. Placeholder to confirm:
  * CPF/CNPJ, contact email (see content/site.ts).
  */
 import type { Metadata } from "next";
@@ -32,9 +32,7 @@ export default function TermsPage() {
       <p>
         Ao usar este site e acompanhar o {site.name} nas redes sociais, você
         concorda com estes termos. O projeto é mantido por{" "}
-        {/* TODO: operator name and CPF/CNPJ (content/site.ts). */}
-        <span className="placeholder">{site.operator.name}</span> (
-        <span className="placeholder">{site.operator.id}</span>).
+        {site.operator.name}.
       </p>
 
       <h2>1. O que é o {site.name}</h2>
