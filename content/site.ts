@@ -16,8 +16,8 @@ export const site = {
   operator: {
     name: "Renata Mourão Guerreiro",
   },
-  legalEffectiveDate: "11 de outubro de 2026",
-  legalEffectiveDateISO: "2026-10-11",
+  legalEffectiveDate: "15 de outubro de 2026",
+  legalEffectiveDateISO: "2026-10-15",
 } as const;
 
 export type SocialLink = {

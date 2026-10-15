@@ -95,26 +95,38 @@ export default function TermsPage() {
         aparecem apenas como referência.
       </p>
 
-      <h2>7. Privacidade</h2>
+      <h2>7. Plataformas de terceiros</h2>
+      <p>
+        Publicamos o nosso conteúdo no YouTube por meio dos Serviços de API do
+        YouTube. Ao usar o {site.name} e assistir aos nossos vídeos no
+        YouTube, você concorda em ficar vinculado aos{" "}
+        <a href="https://www.youtube.com/t/terms" rel="noopener noreferrer">
+          Termos de Serviço do YouTube
+        </a>
+        . O uso do Instagram, do Pinterest e do TikTok segue os termos de cada
+        plataforma.
+      </p>
+
+      <h2>8. Privacidade</h2>
       <p>
         Como tratamos dados está na{" "}
         <Link href="/privacidade">política de privacidade</Link>.
       </p>
 
-      <h2>8. Mudanças</h2>
+      <h2>9. Mudanças</h2>
       <p>
         Podemos atualizar estes termos. A versão vigente fica sempre nesta
         página, com a data no topo.
       </p>
 
-      <h2>9. Lei aplicável</h2>
+      <h2>10. Lei aplicável</h2>
       <p>
         Estes termos seguem as leis da República Federativa do Brasil. Fica
         eleito o foro do domicílio do consumidor, conforme o Código de Defesa
         do Consumidor.
       </p>
 
-      <h2>10. Contato</h2>
+      <h2>11. Contato</h2>
       <p>
         {/* TODO: confirm the contact mailbox exists (content/site.ts). */}
         Fale com a gente em <a href={`mailto:${email}`}>{email}</a>.
