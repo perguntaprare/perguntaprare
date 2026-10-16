@@ -50,18 +50,30 @@ npm run lint
 npm run build    # production build (all routes prerendered as static)
 ```
 
-## Deploy on Vercel
+## Deploy (Cloudflare)
 
-1. In Vercel: **Add New → Project → Import** the GitHub repo `perguntaprare/perguntaprare`.
-2. Framework preset: **Next.js** (auto-detected). No build settings or env vars to change. Deploy.
-3. Project → **Settings → Domains**: add `perguntaprare.com.br` and `www.perguntaprare.com.br`
-   (set one to redirect to the other; apex as primary is suggested).
-4. At **Registro.br** (registro.br → domain → DNS): create the records Vercel shows on the
-   Domains page, typically an `A` record for the apex and a `CNAME` for `www` pointing at
-   Vercel. Use the exact values Vercel displays. (Alternatively, switch the domain's
-   nameservers to Vercel's.)
-5. Wait for DNS to propagate; Vercel issues HTTPS certificates automatically.
-6. Check that `https://perguntaprare.com.br/privacidade` and `/termos` load, then use them
-   in the developer-app forms.
+The site is a **static export** (`output: "export"` in `next.config.ts`): `npm run build`
+writes plain files to `out/`, and Cloudflare serves them as **Workers static assets**
+(`wrangler.jsonc`). There's no server code. Static asset requests are free and unlimited,
+and commercial use is allowed. Vercel Hobby is non-commercial only, which is why the
+site moved (decision p10, Oct 2026).
 
-Every push to `main` redeploys production.
+```sh
+npm run build          # → out/
+npx wrangler deploy    # uploads out/ to the "perguntaprare" Worker
+```
+
+- Needs `wrangler login` on the Cloudflare account that owns the `perguntaprare.com.br`
+  zone (DNS already lives there).
+- `public/_headers` sets the security headers and the `image/png` type of `/opengraph-image`
+  (Next exports it without an extension).
+- `/privacidade` and `/termos` keep their exact URLs: Google's OAuth consent screen and the
+  developer apps link to them, so don't turn on `trailingSlash`.
+- Custom domains (`perguntaprare.com.br`, `www.`) are attached to the Worker in the
+  Cloudflare dashboard → Workers & Pages → perguntaprare → Settings → Domains & Routes.
+- Static export means no request-time features: no `cookies()`/`headers()`, no Route Handlers
+  that read the request, no default `next/image` optimisation. The internal tool
+  (`app.perguntaprare.com.br`, repo `perguntaprare/app`) is where anything dynamic goes.
+
+Don't forget: Wrangler run without `wrangler.jsonc` tries to auto-configure the project for
+OpenNext (it rewrites `package.json` and `next.config.ts`). Keep the config file.

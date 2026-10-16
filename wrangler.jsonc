@@ -1,0 +1,14 @@
+// Cloudflare Workers static assets: serves the `next build` export in out/.
+// No Worker code runs; requests for static assets are free and unlimited.
+// Deploy: npm run build && npx wrangler deploy
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "perguntaprare",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./out",
+    // /privacidade serves privacidade.html; unknown paths get out/404.html with a 404.
+    "html_handling": "drop-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}

@@ -40,3 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .secrets/
+
+# wrangler local state
+.wrangler/
