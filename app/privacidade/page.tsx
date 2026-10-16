@@ -2,9 +2,10 @@
  * TEMPLATE NOTICE: this privacy policy is a plain-language template written
  * for the current state of the project (static public site, no visitor
  * accounts, no forms, no tracking cookies, developer apps that only publish to
- * our own social accounts) and for the planned private operator area (the
- * "publisher", decided 2026-10-15: sign-in for the project's operators only,
- * no public sign-up). It is written to cover the YouTube API Services
+ * our own social accounts) and for the operators' internal tool (the
+ * "publisher" at app.perguntaprare.com.br, decided 2026-10-15 in D20: sign-in
+ * for the project's operators only, no public sign-up; this site has no
+ * sign-in at all). It is written to cover the YouTube API Services
  * Developer Policies (section III.A) and the Meta, Pinterest and TikTok
  * developer reviews.
  * It must be reviewed by a qualified professional (lawyer / LGPD specialist)
@@ -86,15 +87,18 @@ export default function PrivacyPage() {
         . Nós não usamos esses registros para identificar você.
       </p>
 
-      <h2>3. Área restrita dos operadores</h2>
+      <h2>3. Ferramenta interna dos operadores</h2>
       <p>
-        O site pode ter uma área restrita (o &ldquo;publicador&rdquo;), usada
-        só pelas pessoas que operam o projeto para conectar as contas da marca
-        nas redes sociais e publicar os nossos próprios vídeos. Não existe
-        cadastro público: o acesso é liberado apenas para os operadores, e
-        nenhum visitante é convidado a entrar.
+        Este site não tem login. As pessoas que operam o projeto usam uma
+        ferramenta interna (o &ldquo;publicador&rdquo;), em{" "}
+        <ExternalLink href="https://app.perguntaprare.com.br">
+          app.perguntaprare.com.br
+        </ExternalLink>
+        , para conectar as contas da marca nas redes sociais e publicar os
+        nossos próprios vídeos. Só os operadores entram lá: não existe
+        cadastro público, e nenhum visitante é convidado a entrar.
       </p>
-      <p>Quando essa área está ativa, ela guarda apenas:</p>
+      <p>A ferramenta interna guarda apenas:</p>
       <ul>
         <li>
           a identidade de login do operador (nome, e-mail e identificador da
@@ -103,9 +107,9 @@ export default function PrivacyPage() {
         </li>
         <li>
           um cookie de sessão estritamente necessário, colocado só no
-          navegador de quem entra na área restrita, para manter o login. Ele
-          não é usado para publicidade nem para acompanhar a navegação, e
-          visitantes do site público não recebem esse cookie;
+          navegador de quem entra na ferramenta interna, para manter o login.
+          Ele não é usado para publicidade nem para acompanhar a navegação, e
+          visitantes deste site não recebem esse cookie;
         </li>
         <li>
           as credenciais de acesso (tokens) das contas da própria marca nas
@@ -247,12 +251,12 @@ export default function PrivacyPage() {
         <li>
           <strong>Com quem compartilhamos:</strong> com ninguém. Os dados não
           são vendidos nem cedidos; ficam apenas na infraestrutura de
-          hospedagem que faz o site funcionar.
+          hospedagem da ferramenta interna.
         </li>
         <li>
           <strong>Dispositivos e cookies:</strong> o uso da API não coloca
           cookies no navegador de visitantes. O único cookie é o de sessão da
-          área restrita, descrito na seção 3.
+          ferramenta interna, descrito na seção 3.
         </li>
         <li>
           <strong>Como revogar:</strong> o acesso pode ser removido a qualquer
@@ -309,9 +313,9 @@ export default function PrivacyPage() {
       <h2>9. Mudanças nesta política</h2>
       <p>
         Se o site passar a coletar algum dado de visitantes (por exemplo, um
-        formulário ou uma busca), ou se a área restrita passar a guardar algo
-        além do descrito aqui, atualizamos esta página antes, com a nova data
-        de vigência.
+        formulário ou uma busca), ou se a ferramenta interna passar a guardar
+        algo além do descrito aqui, atualizamos esta página antes, com a nova
+        data de vigência.
       </p>
 
       <h2>10. Contato</h2>
